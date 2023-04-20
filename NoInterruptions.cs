@@ -16,7 +16,7 @@ public class NoInterruptions : MelonMod
 {
     public static short tmp_enemypcnt = 0; // Remembers the number of enemies before modification
 
-    // After initiating a negociation sequence
+    // After initiating a negotiation sequence
     [HarmonyPatch(typeof(nbNegoProcess), nameof(nbNegoProcess.InitNegoProcessData))]
     private class Patch2
     {
@@ -28,7 +28,7 @@ public class NoInterruptions : MelonMod
         }
     }
 
-    // After displaying a negociation message
+    // After displaying a negotiation message
     [HarmonyPatch(typeof(nbNegoProcess), nameof(nbNegoProcess.nbDispNegoMessage))]
     private class Patch5
     {
